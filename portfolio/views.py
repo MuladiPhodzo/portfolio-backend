@@ -7,3 +7,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
+# ✅ Fix: Move Home function outside the class
+def home(request):
+    return render(request, "portfolio/Home.html")  # Ensure templates are configured correctly
