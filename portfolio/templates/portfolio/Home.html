@@ -5,8 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width*device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
 </head>
 <body>
-    <h1> my page </h1>
+    <nav id='nav-bar' class='flex s-around bg-color'>
+        <div class='left-nav'>
+            <h2 class="t-white">Portfolio</h2>
+        </div>
+        <div class='right-nav'>
+            <li><a href="@home" class="t-white roboto">Home<i></i></a></li>
+            <li><a href="@services" class="t-white roboto">Services<i></i></a></li>
+            <li><a href="@skills" class="t-white roboto">Skills<i></i></a></li>
+            <li><a href="@stack" class="t-white roboto">Stack<i></i></a></li>
+            <li><a href="@git" class="t-white roboto">GitHub<i></i></a></li>
+            <li><a href="@projects" class="t-white roboto">Projects<i></i></a></li>
+            <li><a href="@contact_me"><button>Contact Me</button></a></li>
+        </div>
+    </nav>
+
+    <!--home section-->
+    <section id="home" class="flex s-round sw-30 m-auto">
+        <div class="home-left flext items-center">
+            <div class="home-content">
+                <h1 class="popinss"> Hello World,</h1>
+                <h2 class="t-white">I am</h2>
+                <h6 class="popinss">Phodzo Muladi</h6>
+                
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae consequatur fugiat et excepturi, possimus dolorem iure ea deleniti commodi maxime laboriosam assumenda vero a ad velit voluptas error dignissimos.</p>
+            </div>
+
+        </div>
+        <div class="home-right flex s-center item-center">
+            <img src="{%static 'images/pic1.png'%}" alt="picture">
+        </div>
+    </section>
+
+    <!-- serives section-->
+    <section id="services">
+        <h1 class="t-center my-2 t-white f-2">Services</h1>
+        <div class="services-container flex s-around h-se">
+            <div class="services-right flex">
+                <div class="jar bar p-relative">
+                    <span class="bar-content left t-whilte">Software Quality and Assurance</span>
+                    <span class="bar-content right-skills t-white">60%</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non ipsa ad perspiciatis nam nesciunt, dolorum similique ipsam asperiores veritatis porro blanditiis id, commodi iure autem voluptatibus ex? Ipsum, omnis?</p>
+                </div>
+    
+                <div class="jar bar p-relative">
+                    <span class="bar-content left t-whilte">Web Development</span>
+                    <span class="bar-content right-skills t-white">60%</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non ipsa ad perspiciatis nam nesciunt, dolorum similique ipsam asperiores veritatis porro blanditiis id, commodi iure autem voluptatibus ex? Ipsum, omnis?</p>
+                </div>
+    
+                <div class="jar bar p-relative">
+                    <span class="bar-content left t-whilte">Mobile Development</span>
+                    <span class="bar-content right-skills t-white">70%</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non ipsa ad perspiciatis nam nesciunt, dolorum similique ipsam asperiores veritatis porro blanditiis id, commodi iure autem voluptatibus ex? Ipsum, omnis?</p>
+                </div>
+            </div>
+        </div> 
+        <div class="services-right s-center item-center">
+            <img src="{%static 'images/pic3.png'%}" alt="services image">
+        </div>
+    </section>
+
+    <!-- skills section-->
+    <section id="skills">
+        <h1 class="t-center my-2 t-white f-2">Skills</h1>
+        <div class="services-container flex s-around h-se">
+            <div class="skills-left flex s-center items-center">
+                <img src="{%static 'images/pic2.png'%}" alt="skills image">
+            </div>
+            <div class="skills-right flex items-container">
+                <div class="skills-container">
+                    <div class="jar bar p-relative">
+                        <span class="bar-content left t-whilte">OOP</span>
+                        <span class="bar-content right-skills t-white">70%</span>
+                    </div>
+
+                    <div class="jar bar p-relative">
+                        <span class="bar-content left t-whilte">Test Driven Development</span>
+                        <span class="bar-content right-skills t-white">60%</span>
+                    </div>
+
+                    <div class="jar bar p-relative">
+                        <span class="bar-content left t-whilte">Version Control</span>
+                        <span class="bar-content right-skills t-white">70%</span>
+                    </div>
+
+                    <div class="jar bar p-relative">
+                        <span class="bar-content left t-whilte">Igile Methodologies</span>
+                        <span class="bar-content right-skills t-white">70%</span>
+                    </div>
+
+                    <div class="jar bar p-relative">
+                        <span class="bar-content left t-whilte">Cloud Technologies</span>
+                        <span class="bar-content right-skills t-white">70%</span>
+                    </div>
+
+                    <div class="jar bar p-relative">
+                        <span class="bar-content left t-whilte">CI/CD</span>
+                        <span class="bar-content right-skills t-white">50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- tech stack section-->
+    <section id="stack"></section>
+
+    <!-- git section-->
+    <section id="git"></section>
+
+    <!-- projects section-->
+    <section id="projects"></section>
 </body>
 </html>
