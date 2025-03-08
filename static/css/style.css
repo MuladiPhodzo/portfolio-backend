@@ -19,6 +19,31 @@ footer{
     background: linear-gradient(left);   
 }
 
+#contact-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: to add a dark background behind the form */
+    padding: 20px;
+    border-radius: 8px;
+    display: none; /* Hide the form initially */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+/* Optional: Style for the button */
+.contact-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #45a049;
+}
+
 
 
 

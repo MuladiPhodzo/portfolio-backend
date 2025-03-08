@@ -19,7 +19,7 @@
             <li><a href="#stack" class="t-white roboto">Stack<i></i></a></li>
             <li><a href="#projects" class="t-white roboto">Projects<i></i></a></li>
             <li><a href="#git" class="t-white roboto">GitHub<i></i></a></li>
-            <li><a href="#contact_me"><button onclick="Contact=true">Contact Me</button></a></li>
+            <li><a href="#contact_me"><button onclick="toggleForm()" class="contact-button">Contact Me</button></a></li>
         </div>
     </nav>
 
@@ -149,6 +149,7 @@
     <!-- git section-->
     <section id="git">
         <!--add link to github-->
+        <h2 class="t-center my-2 t-white f-2">GitHub</h2>
         <div>
             <h2 class="ReadMe">ReadMe file goes here</h2>
         </div>
@@ -162,14 +163,13 @@
     <!-- projects section-->
     <section id="projects">
         <!--dynamicaly load projects from github-->
+        <h2 class="t-center my-2 t-white f-2">Projects</h2>
         <h1>Awaiting repo downloads, coming soon</h1>
     </section>
 
-    <div class="contact-me-form flex center">
-        <form 
-        {% if Contact=True %}
-        {% endif %} action="True" method="post"
-        class="popiness my-2 items-center f-2">
+    <div id="contact-form" class="contact-me-form flex center" style="display: none;">
+        <form action="True" method="post" class="popiness my-2 items-center f-2">
+            <h2 class="t-center my-2 t-white f-2">Contact Me</h2>
             <input type="text" name="Name">
             <input type="email" name="Email" id="Email">
             <input type="digit" name="Cell Number" id="contact">
@@ -177,6 +177,18 @@
             <button class="send-button">Send</button>
         </form>
     </div>
+
+    <script>
+        function toggleForm() {
+            var form = document.getElementById('contact-form');
+            // Toggle the form visibility
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+    </script>
    
 </body>
 <footer>
