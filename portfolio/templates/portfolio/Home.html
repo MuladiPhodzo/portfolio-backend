@@ -7,29 +7,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
 </head>
-<body>
+<body class="base">
     <nav id='nav-bar' class='flex s-around bg-color'>
         <div class='left-nav'>
-            <h2 class="t-white">Portfolio</h2>
+            <h1 class="t-white">Portfolio</h1>
         </div>
         <div class='right-nav'>
-            <li><a href="@home" class="t-white roboto">Home<i></i></a></li>
-            <li><a href="@services" class="t-white roboto">Services<i></i></a></li>
-            <li><a href="@skills" class="t-white roboto">Skills<i></i></a></li>
-            <li><a href="@stack" class="t-white roboto">Stack<i></i></a></li>
-            <li><a href="@git" class="t-white roboto">GitHub<i></i></a></li>
-            <li><a href="@projects" class="t-white roboto">Projects<i></i></a></li>
-            <li><a href="@contact_me"><button>Contact Me</button></a></li>
+            <li><a href="#home" class="t-white roboto">Home<i></i></a></li>
+            <li><a href="#services" class="t-white roboto">Services<i></i></a></li>
+            <li><a href="#skills" class="t-white roboto">Skills<i></i></a></li>
+            <li><a href="#stack" class="t-white roboto">Stack<i></i></a></li>
+            <li><a href="#projects" class="t-white roboto">Projects<i></i></a></li>
+            <li><a href="#git" class="t-white roboto">GitHub<i></i></a></li>
+            <li><a href="#contact_me"><button onclick="Contact=true">Contact Me</button></a></li>
         </div>
     </nav>
 
     <!--home section-->
     <section id="home" class="flex s-round sw-30 m-auto">
-        <div class="home-left flext items-center">
+        <div class="home-left flex items-center">
             <div class="home-content">
-                <h1 class="popinss"> Hello World,</h1>
-                <h2 class="t-white">I am</h2>
-                <h6 class="popinss">Phodzo Muladi</h6>
+                <h2 class="popinss"> "Hello World",</h2>
+                <h3 class="t-white">I am</h3>
+                <h4 class="popinss">Phodzo Muladi</h4>
                 
             </div>
             <div>
@@ -38,6 +38,7 @@
 
         </div>
         <div class="home-right flex s-center item-center">
+            <!--image of myself-->
             <img src="{%static 'images/pic1.png'%}" alt="picture">
         </div>
     </section>
@@ -47,26 +48,29 @@
         <h1 class="t-center my-2 t-white f-2">Services</h1>
         <div class="services-container flex s-around h-se">
             <div class="services-right flex">
-                <div class="jar bar p-relative">
-                    <span class="bar-content left t-whilte">Software Quality and Assurance</span>
-                    <span class="bar-content right-skills t-white">60%</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non ipsa ad perspiciatis nam nesciunt, dolorum similique ipsam asperiores veritatis porro blanditiis id, commodi iure autem voluptatibus ex? Ipsum, omnis?</p>
+
+                <div class="jar bar p-relative" id="S-M-Dev">
+                    <span class="bar-content left t-whilte">Software & Mobile Development</span>
+                    <span class="bar-content right-skills t-white">70%</span>
+                    <p>During my time at WeThinkCode_ where I did mobile development as an elective, it was during this time that I learned to develop applications using flutter, a dart based framework in conjuction with firestore as a database tool, the application was based on the uber app where users could request lifts or post lift offerings. while developinf this app I implemented user authentication, authorisation and data management, all this was build on the Software Engineering principles that i learned during my time at WeThinkCode_. </p>
                 </div>
-    
+
                 <div class="jar bar p-relative">
                     <span class="bar-content left t-whilte">Web Development</span>
                     <span class="bar-content right-skills t-white">60%</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non ipsa ad perspiciatis nam nesciunt, dolorum similique ipsam asperiores veritatis porro blanditiis id, commodi iure autem voluptatibus ex? Ipsum, omnis?</p>
+                    <p>Developing the WeShare app at WeThinkCode_ taught me a lot about web Development. the weShare app is a classical finance sharing and tracking app, users are able to send each other money or ask for a loan from a friend. i further develop my web developing skills when i was an intern at Qlink, developing a web based platform using vue.js and Quasar framework. I futher learned more techniques, tools and frameworks while developing this portfolio which i developed with Django-REST-Framework for the backend and Angular for the frontend.</p>
                 </div>
-    
+
                 <div class="jar bar p-relative">
-                    <span class="bar-content left t-whilte">Mobile Development</span>
-                    <span class="bar-content right-skills t-white">70%</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non ipsa ad perspiciatis nam nesciunt, dolorum similique ipsam asperiores veritatis porro blanditiis id, commodi iure autem voluptatibus ex? Ipsum, omnis?</p>
+                    <span class="bar-content left t-whilte">Software Quality and Assurance</span>
+                    <span class="bar-content right-skills t-white">46%</span>
+                    <p>Already well equipped with the skills for Test Driven Development from WeThinkCode_ which aimed to train students to deliver industry standard applications, my time at Qlink where I interned for 5 months in the SQA department further instilled the requirements a program must meet to be user friendly, and meet industry standards. learning the different testing methodologies has further deepened my understanding of Software Engineering. using different testing platforms like Postman, JMeter for API testing and Selenium Web Driver for automated testing.</p>
                 </div>
+                
             </div>
         </div> 
         <div class="services-right s-center item-center">
+            <!--image of software developer with fade left gradient-->
             <img src="{%static 'images/pic3.png'%}" alt="services image">
         </div>
     </section>
@@ -76,38 +80,39 @@
         <h1 class="t-center my-2 t-white f-2">Skills</h1>
         <div class="services-container flex s-around h-se">
             <div class="skills-left flex s-center items-center">
+                <!--image of code block with fade right gradient-->
                 <img src="{%static 'images/pic2.png'%}" alt="skills image">
             </div>
             <div class="skills-right flex items-container">
                 <div class="skills-container">
                     <div class="jar bar p-relative">
                         <span class="bar-content left t-whilte">OOP</span>
-                        <span class="bar-content right-skills t-white">70%</span>
+                        <span class="bar-content right-skills t-white">85%</span>
                     </div>
 
                     <div class="jar bar p-relative">
                         <span class="bar-content left t-whilte">Test Driven Development</span>
-                        <span class="bar-content right-skills t-white">60%</span>
+                        <span class="bar-content right-skills t-white">80%</span>
                     </div>
 
                     <div class="jar bar p-relative">
                         <span class="bar-content left t-whilte">Version Control</span>
-                        <span class="bar-content right-skills t-white">70%</span>
+                        <span class="bar-content right-skills t-white">76%</span>
                     </div>
 
                     <div class="jar bar p-relative">
-                        <span class="bar-content left t-whilte">Igile Methodologies</span>
-                        <span class="bar-content right-skills t-white">70%</span>
+                        <span class="bar-content left t-whilte">Agile Methodologies</span>
+                        <span class="bar-content right-skills t-white">82%</span>
                     </div>
 
                     <div class="jar bar p-relative">
                         <span class="bar-content left t-whilte">Cloud Technologies</span>
-                        <span class="bar-content right-skills t-white">70%</span>
+                        <span class="bar-content right-skills t-white">54%</span>
                     </div>
 
                     <div class="jar bar p-relative">
                         <span class="bar-content left t-whilte">CI/CD</span>
-                        <span class="bar-content right-skills t-white">50%</span>
+                        <span class="bar-content right-skills t-white">60%</span>
                     </div>
                 </div>
             </div>
@@ -115,12 +120,87 @@
     </section>
 
     <!-- tech stack section-->
-    <section id="stack"></section>
+    <section id="stack">
+        <h2 class="t-center my-2 t-white f-2">Tech Stack</h2>
+        <div class="items-container flex s-around h-se">
+            <div class="stack flex s-center items-center">
+                <!--change image to card with tool logo (ie, java logo, python logo)-->
+                <img src="{%static 'images/pic3.png'%}" alt="skills image">
+            </div>
+            <div class="stack-list">
+                <li>Python</li>
+                <li>Java</li>
+                <li>flutter</li>
+                <li>JavaScript</li>
+                <li>html</li>
+                <li>css</li>
+                <li>Pandas</li>
+                <li>Numpy</li>
+                <li>Matplotlib</li>
+                <li>maven</li>
+                <li>Postman</li>
+                <li>selenium</li>
+                <li>Junit</li>
+            </div>
+            
+        </div>
+    </section>
 
     <!-- git section-->
-    <section id="git"></section>
+    <section id="git">
+        <!--add link to github-->
+        <div>
+            <h2 class="ReadMe">ReadMe file goes here</h2>
+        </div>
+        <div>
+            <button class="GitHub"><a href="www.github.com/LionelBeans1111">
+                <img src="{%static 'images/githubicon.png'%}" alt="git icon">
+            </a></button>
+        </div>
+    </section>
 
     <!-- projects section-->
-    <section id="projects"></section>
+    <section id="projects">
+        <!--dynamicaly load projects from github-->
+        <h1>Awaiting repo downloads, coming soon</h1>
+    </section>
+
+    <div class="contact-me-form flex center">
+        <form 
+        {% if Contact=True %}
+        {% endif %} action="True" method="post"
+        class="popiness my-2 items-center f-2">
+            <input type="text" name="Name">
+            <input type="email" name="Email" id="Email">
+            <input type="digit" name="Cell Number" id="contact">
+            <input type="text" name="Message" id="message">
+            <button class="send-button">Send</button>
+        </form>
+    </div>
+   
 </body>
+<footer>
+    <div class="social-links items-center flex ">
+
+        <li>
+            <!--linkedIn-->
+            <button class="linkedIn-button">
+                <a href="linkedin.com/in/phodzo-muladi/65421457"><img src="{%static 'images/linkedInlogo.png'%}" alt="linkedIn"></a>  
+            </button>
+        </li>
+
+        <li>
+            <!--github-->
+            <button class="Github-button">
+                <a href="github.com/LionelBeans1111"><img src="{%static 'images/github-logo.png'%}" alt="Github"></a>
+            </button>
+        </li>
+
+    </div>
+    <div>
+        <h2 class="copyrights">
+           @ All Copyrights Reserved - Phodzo Muladi
+        </h2>
+    </div>
+</footer>
 </html>

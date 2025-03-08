@@ -9,4 +9,5 @@ class ProjectViewSet(viewsets.ModelViewSet):
 
 # ✅ Fix: Move Home function outside the class
 def home(request):
-    return render(request, "portfolio/Home.html")  # Ensure templates are configured correctly
+    return render(request, "portfolio/home.html")  # Ensure templates are configured correctly
+

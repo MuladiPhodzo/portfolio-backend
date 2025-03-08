@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(6, 6, 167);
+}
+
+nav{
+    background-color: rgb(12, 12, 108);
+}
+
+footer{
+    background-color: rgb(12, 12, 108);
+}
+
+#home{
+    text-align: left;
+}
+
+#skills{
+    color: blue;
+    background: linear-gradient(left);   
+}
+
+
+
+
