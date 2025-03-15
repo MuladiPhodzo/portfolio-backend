@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from portfolio.views import ProjectViewSet
+from api.views import ProjectViewSet
 
 
 
@@ -27,6 +27,6 @@ router.register(r'projects', ProjectViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('', include('portfolio.urls'))
+    path('api/', include(router.urls)), #API abse url
+    # path('', include('portfolio.urls'))
 ]

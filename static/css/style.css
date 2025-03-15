@@ -1,24 +1,85 @@
+
 body{
-    background-color: rgb(6, 6, 167);
+    background-color: rgb(5, 5, 162);
 }
 
-nav{
-    background-color: rgb(12, 12, 108);
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: ubuntu, sans-serif;
+    scroll-behavior: smooth;
+}
+/*nav bar*/
+#nav-bar{
+    line-height: 4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: .5px solid #ffffff52;
+    border-width: 80%;
+    margin-bottom: 1rem;
 }
 
-footer{
-    background-color: rgb(12, 12, 108);
+#nav-bar ul {
+    list-style: none;
 }
 
-#home{
-    text-align: left;
+#nav-bar li {
+    margin: 0px 1rem;
 }
 
-#skills{
-    color: blue;
-    background: linear-gradient(left);   
+#nav-bar li a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
 }
 
+.right {
+    display: none;
+}
+
+.nav-col a:hover {
+    border-radius: .4rem;
+    color: #1f1f38;
+    background-color: #fff;
+}
+/*home*/
+.home-left,
+.home-right {
+    width: 30%;
+    padding: 7rem;
+    padding: 0;
+}
+.home-left h2 {
+    color: rgb(255, 255, 7);
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+.home-left h3 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.home-left h4 {
+    color: #8f00fc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+.home-left h5 {
+    color: aqua;
+    font-size: x-large;
+}
+
+.home-left h6,
+h4 {
+    color: rgb(216, 117, 173);
+}
+
+/*contact form*/
 #contact-form {
     position: fixed;
     top: 50%;
@@ -35,15 +96,20 @@ footer{
 .contact-button {
     padding: 10px 20px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(172, 167, 167);
     border: none;
     cursor: pointer;
+    
 }
 
 .contact-button:hover {
     background-color: #45a049;
 }
 
+.copyrights{
+    font-size: smaller;
+    color: grey;
+}
 
 
 

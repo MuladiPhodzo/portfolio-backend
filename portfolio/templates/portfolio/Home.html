@@ -3,9 +3,12 @@
 <html lang='eng'>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width*device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <!--Font Awesome provides ready-to-use icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body class="base">
     <nav id='nav-bar' class='flex s-around bg-color'>
@@ -27,11 +30,12 @@
     <section id="home" class="flex s-round sw-30 m-auto">
         <div class="home-left flex items-center">
             <div class="home-content">
-                <h2 class="popinss"> "Hello World",</h2>
+                <h2 class="popinss">"Hello World",</h2>
                 <h3 class="t-white">I am</h3>
                 <h4 class="popinss">Phodzo Muladi</h4>
-                
+                <h5 class="popinss">a Software Engineer</h5>
             </div>
+
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae consequatur fugiat et excepturi, possimus dolorem iure ea deleniti commodi maxime laboriosam assumenda vero a ad velit voluptas error dignissimos.</p>
             </div>
@@ -39,7 +43,7 @@
         </div>
         <div class="home-right flex s-center item-center">
             <!--image of myself-->
-            <img src="{%static 'images/pic1.png'%}" alt="picture">
+            <img src="{% static 'images/pic1.png' %}" alt="picture">
         </div>
     </section>
 
@@ -71,7 +75,7 @@
         </div> 
         <div class="services-right s-center item-center">
             <!--image of software developer with fade left gradient-->
-            <img src="{%static 'images/pic3.png'%}" alt="services image">
+            <img src="{% static 'images/pic3.png' %}" alt="services image">
         </div>
     </section>
 
@@ -81,7 +85,7 @@
         <div class="services-container flex s-around h-se">
             <div class="skills-left flex s-center items-center">
                 <!--image of code block with fade right gradient-->
-                <img src="{%static 'images/pic2.png'%}" alt="skills image">
+                <img src="{% static 'images/pic2.png' %}" alt="skills image">
             </div>
             <div class="skills-right flex items-container">
                 <div class="skills-container">
@@ -123,26 +127,27 @@
     <section id="stack">
         <h2 class="t-center my-2 t-white f-2">Tech Stack</h2>
         <div class="items-container flex s-around h-se">
-            <div class="stack flex s-center items-center">
-                <!--change image to card with tool logo (ie, java logo, python logo)-->
-                <img src="{%static 'images/pic3.png'%}" alt="skills image">
-            </div>
             <div class="stack-list">
-                <li>Python</li>
-                <li>Java</li>
-                <li>flutter</li>
-                <li>JavaScript</li>
-                <li>html</li>
-                <li>css</li>
-                <li>Pandas</li>
-                <li>Numpy</li>
-                <li>Matplotlib</li>
-                <li>maven</li>
-                <li>Postman</li>
-                <li>selenium</li>
-                <li>Junit</li>
+                <ul class="tech-icons">
+                    <!--Font Awesome icons-->
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fab fa-java"></i> Java</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fab fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li><i class="fab fa-react"></i> React</li>
+                    <li><i class="fas fa-database"></i> SQL</li>
+                    <li><i class="fas fa-flask"></i> Flask</li>
+                    <li><i class="fab fa-git"></i> Git</li>
+                    <!--use images-->
+                    <img src="{% static 'images/pandas-logo.png' %}" alt="Pandas">
+                    <img src="{% static 'images/numpy-logo.png' %}" alt="NumPy">
+                    <li>Matplotlib</li>
+                    <img src="{% static 'images/postman-logo.png' %}" alt="Postman">
+                    <li>selenium</li>
+                    <li>Junit</li>
+                </ul>
             </div>
-            
         </div>
     </section>
 
@@ -153,28 +158,32 @@
         <div>
             <h2 class="ReadMe">ReadMe file goes here</h2>
         </div>
-        <div>
-            <button class="GitHub"><a href="www.github.com/LionelBeans1111">
-                <img src="{%static 'images/githubicon.png'%}" alt="git icon">
-            </a></button>
-        </div>
+        <!-- projects section-->
+        <section id="projects">
+            <!--dynamicaly load projects from github-->
+            <h2 class="t-center my-2 t-white f-2">Projects</h2>
+            <h3>Awaiting repo downloads, coming soon</h3>
+        </section>
     </section>
 
-    <!-- projects section-->
-    <section id="projects">
-        <!--dynamicaly load projects from github-->
-        <h2 class="t-center my-2 t-white f-2">Projects</h2>
-        <h1>Awaiting repo downloads, coming soon</h1>
-    </section>
-
+    <!--contact me form-->
     <div id="contact-form" class="contact-me-form flex center" style="display: none;">
-        <form action="True" method="post" class="popiness my-2 items-center f-2">
+        <form method="post" class="popiness my-2 items-center f-2">
             <h2 class="t-center my-2 t-white f-2">Contact Me</h2>
-            <input type="text" name="Name">
-            <input type="email" name="Email" id="Email">
-            <input type="digit" name="Cell Number" id="contact">
-            <input type="text" name="Message" id="message">
-            <button class="send-button">Send</button>
+            <div class="name div-form">
+                <input id="Name" class="popinss" type="text" name="Name" placeholder="name" required>
+            </div>
+            <div class="email div-form">
+                <input class="popinss" type="email" name="Email" id="Email" placeholder="email address" required>
+            </div>
+            <div class="phone div-form">
+                <input class="popinss" type="phone" name="number" id="" placeholder="contact number" required>
+            </div>
+            <div class="message div-form">
+                <textarea id="textarea" class="popinss" type="text" cols="30" rows="10" name="Message" id="message" placeholder="text message"></textarea>
+            </div>
+           
+            <button type="submit" class="send-button" id="send-button" onclick="sendMessege()">Send</button>
         </form>
     </div>
 
@@ -191,28 +200,32 @@
     </script>
    
 </body>
-<footer>
+<footer id="footer">
     <div class="social-links items-center flex ">
-
-        <li>
+        <ul class="flex s-center w-80 font-awesome">
             <!--linkedIn-->
-            <button class="linkedIn-button">
-                <a href="linkedin.com/in/phodzo-muladi/65421457"><img src="{%static 'images/linkedInlogo.png'%}" alt="linkedIn"></a>  
-            </button>
-        </li>
+            <a href="https://linkedin.com/in/phodzo-muladi/65421457" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <!--github-->
+            <a href="https://www.github.com/MuladiPhodzo" target="_blank">
+                <li><i class="fa-brands fa-github-in"></i></li>
+            </a>
+        </ul>
+        
 
         <li>
-            <!--github-->
+            
             <button class="Github-button">
-                <a href="github.com/LionelBeans1111"><img src="{%static 'images/github-logo.png'%}" alt="Github"></a>
+                <a href=><img src="{%static 'images/github-logo.png'%}" alt="Github"></a>
             </button>
         </li>
 
     </div>
-    <div>
-        <h2 class="copyrights">
-           @ All Copyrights Reserved - Phodzo Muladi
-        </h2>
-    </div>
+    
+        <p class="copyrights">
+           @ All Copyrights Reserved - <span class="cpy-white popinss">Phodzo Muladi</span>
+        </p>
+    
 </footer>
 </html>

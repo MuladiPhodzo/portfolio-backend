@@ -14,5 +14,5 @@ class Project(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=30)
     Email = models.EmailField(max_length=30)
-    Cell = models.IntegerField()
-    Message = models.TextField()
+    number = models.CharField(max_length=13)
+    Message = models.TextField(max_length=200)
