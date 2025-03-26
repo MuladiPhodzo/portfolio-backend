@@ -18,15 +18,18 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from api.views import ProjectViewSet
+from django.http import JsonResponse
 
 
 
 router = DefaultRouter()
 router.register(r'projects', ProjectViewSet)
 
+def home(request):
+    return JsonResponse({'message': "Welcome to django API"})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)), #API abse url
+    path('', include(router.urls)), #API abse url
     # path('', include('portfolio.urls'))
 ]
