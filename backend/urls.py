@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from api.views import ProjectViewSet
+from api.views import ProjectViewSet, ContactViewSet
 from django.http import JsonResponse
 
 
@@ -31,5 +31,5 @@ def home(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)), #API abse url
-    # path('', include('portfolio.urls'))
+    path('api/contact/', ContactViewSet.as_view(), name='contact'), # contact form API
 ]
