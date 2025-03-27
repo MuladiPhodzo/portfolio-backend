@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*c23sxyvwlf(^@c5#qdp=r9^d7k0qtlitv=vj=v&8+a3_l7rh#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "http://13.60.162.35:8000"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "13.60.162.35", "EC2"]
 
 
 
@@ -77,6 +77,7 @@ TEMPLATES = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",  # angular frontend
+    "http://13.60.162.35:8000",  # django backend
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
