@@ -13,7 +13,7 @@ This is the backend service for the Portfolio Web Application, built using Djang
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/portfolio-backend.git
+git clone https://github.com/MuladiPhodzo/portfolio-backend.git
 cd portfolio-backend
 ```
 
@@ -28,20 +28,8 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Set up environment variables
-Create a `.env` file in the root directory and add:
-```
-SECRET_KEY=your_secret_key
-DEBUG=True  # Set to False in production
-ALLOWED_HOSTS=your_domain_or_ip
-```
 
-### 5. Apply Migrations
-```bash
-python manage.py migrate
-```
-
-### 6. Run the Development Server
+### 4. Run the Development Server
 ```bash
 python manage.py runserver
 ```
