@@ -87,7 +87,7 @@ sudo systemctl restart nginx
 ## 📬 API Endpoints
 | Method | Endpoint | Description |
 |--------|---------|-------------|
-| POST | `/api/` | Send a message |
+| POST | `/api/contact` | Send a message |
 
 ## 📜 License
 This project is licensed under the MIT License.
