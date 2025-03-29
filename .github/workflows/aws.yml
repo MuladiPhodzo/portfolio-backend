@@ -71,6 +71,7 @@ jobs:
             source venv/bin/activate
             pip install -r requirements.txt
             python manage.py migrate
+            sudo systemctl daemon-reload  # Ensure systemd reloads the updated configs
             sudo systemctl restart gunicorn
             sudo systemctl restart nginx
           EOF
