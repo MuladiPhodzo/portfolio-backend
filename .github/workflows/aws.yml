@@ -65,7 +65,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
           
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@13.60.162.35<< 'EOF'
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@${{ secrets.EC2_HOST }}<< 'EOF'
             cd portfolio-backend
             git pull origin main
             source venv/bin/activate
