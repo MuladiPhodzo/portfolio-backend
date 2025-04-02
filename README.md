@@ -69,7 +69,7 @@ Create a configuration file (`/etc/nginx/sites-available/portfolio-backend`):
 ```nginx
 server {
     listen 80;
-    server_name your_domain_or_ip;
+    server_name 13.60.162.35;
 
     location / {
         include proxy_params;
@@ -87,7 +87,7 @@ sudo systemctl restart nginx
 ## 📬 API Endpoints
 | Method | Endpoint | Description |
 |--------|---------|-------------|
-| POST | `/api/` | Send a message |
+| POST | `/api/contact` | Send a message |
 
 ## 📜 License
 This project is licensed under the MIT License.
