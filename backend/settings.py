@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*c23sxyvwlf(^@c5#qdp=r9^d7k0qtlitv=vj=v&8+a3_l7rh#
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["djangoapi.duckdns.org", "127.0.0.1", "localhost", "13.60.162.35", "EC2"]
+ALLOWED_HOSTS = ["djangoapi.duckdns.org", "127.0.0.1", "localhost"]
 
 
 
@@ -79,8 +79,12 @@ TEMPLATES = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",  # angular frontend
     "http://13.60.162.35:8000",  # django backend
+    "https://djangoapi.duckdns.org",  # Secure frontend
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://djangoapi.duckdns.org",
+]
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
