@@ -29,7 +29,7 @@ DEBUG = False
 APPEND_SLASH = False
 
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "13.60.162.35", "EC2"]
+ALLOWED_HOSTS = ["djangoapi.duckdns.org", "127.0.0.1", "localhost", "13.60.162.35", "EC2"]
 
 
 
