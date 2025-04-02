@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-*c23sxyvwlf(^@c5#qdp=r9^d7k0qtlitv=vj=v&8+a3_l7rh#
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["djangoapi.duckdns.org", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["djangoapi.duckdns.org", 
+                 "127.0.0.1", 
+                 "localhost",
+                 "13.60.84.25"]
 
 
 
